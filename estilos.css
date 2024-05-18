@@ -2,6 +2,8 @@ body{
  /* background-color: #191927; */
    background-image: url('Images/forest_background.png');
     background-size: cover;
+    justify-content: center; /* Centra horizontalmente el contenido */
+    align-items: center; /* Centra verticalmente el contenido */
 }
 .texto1{
   color: #798DA3;
