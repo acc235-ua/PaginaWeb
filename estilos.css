@@ -8,19 +8,19 @@ body{
     margin: 0; 
 }
 .texto1{
-  color: #798DA3;
+  color: white;
   font-family: "Open-Sans";
   font-weigth: 400;
 
-  font-size: 13px;
 
 }
 .encabecado{
+      color: white;
     text-align: center; 
     max-width: 600px; 
     margin: 0 auto; 
     padding: 20px;
-   font-size: 25px;
+   font-size: 45px;
 
 }
 
