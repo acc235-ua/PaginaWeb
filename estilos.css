@@ -34,7 +34,7 @@ body{
   display: flex;
 }
 .centrado{
-   display: flex;
+  
  justify-content: center;
  align-items: center;
 }
