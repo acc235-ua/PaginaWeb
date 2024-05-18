@@ -38,3 +38,9 @@ body{
  justify-content: center;
  align-items: center;
 }
+
+.line {
+    border-bottom: 1.5px solid #EEF1F5;
+    margin: 5px 0;
+
+}
