@@ -61,6 +61,15 @@ body{
     align-items: center;
 }
 
-.fotos img {
-    margin-bottom: 20px;
+
+
+
+.itemfotos {
+    margin-bottom: 20px; 
+    text-align: center;
+}
+
+.pie-de-foto {
+    margin-top: 5px;
+    font-style: italic; 
 }
