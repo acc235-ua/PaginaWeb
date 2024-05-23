@@ -1,14 +1,22 @@
 body{
  /* background-color: #191927; */
-   background-image: url('Images/forest_background.png');
+   background-image: url('Images/fondo.png');
     background-size: cover;
     justify-content: center;
     align-items: center;
     height: 100vh; 
     margin: 0; 
+    font-family: 'Press Start 2P';
+    color: aquamarine;
+}
+.footer {
+  margin-top: auto;
+  padding: 20px;
+  text-align: center;
+  padding-top: 10%;
 }
 .texto1{
-  color: white;
+  color: rgb(2, 150, 208);
   font-family: "Open-Sans";
   font-weigth: 400;
 
@@ -30,23 +38,42 @@ body{
 
 }
 .subcabecera1 {
-    width: 510px;
-    height: 31px;
-    color: #3B4754;
-    font-family: "Open Sans";
-    font-weight: 700;
-    font-size: 24px;
+    color: #f6f6f6;
+    font-family: 'Press Start 2P';
+    font-size: 170%;
     line-height: 1.2;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 2%;
 }
 
-.contenedores{
-  display: flex;
+.centrado {
+  margin-bottom: 20px;
 }
-.centrado{
- display: flex;
- justify-content: center;
- align-items: center;
+
+.contenedores {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contenedores img {
+  margin-right: 20px;
+}
+
+.logo_estudio{
+  width: 50%;
+  padding-bottom: 2%;
+}
+
+.centrado_logo{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 10%;
 }
 
 .line {
@@ -56,20 +83,230 @@ body{
 }
 
 .fotos {
-      display: flex;
-    flex-direction: column; 
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
+.subfotos {
+  display: flex;
+  justify-content: center;
+}
 
+.subfotos2{
+  display: flex;
+  justify-content: center;
+}
 
+.fotoUnidad{
+  display: flex;
+  margin: 1%;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  z-index: 1;
+}
 
 .itemfotos {
-    margin-bottom: 20px; 
-    text-align: center;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+}
+
+.fotoUnidad::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, rgba(255, 255, 255, 0.3), transparent 70%, transparent 100%); /* Efecto de brillo holográfico */
+  opacity: 0; /* Cambia la opacidad del brillo */
+  transition: opacity 0.3s ease; /* Transición suave */
+  z-index: 2;
+  pointer-events: none; /* Evita que el pseudo-elemento interfiera con los eventos del ratón */
+}
+
+.fotoUnidad:hover {
+  transform: scale(2.3); /* Agranda la imagen y la centra */
+  box-shadow: 0 0 20px 5px rgba(7, 164, 231, 0.7); /* Brillo azul y sombra */
+}
+
+.efectoBrillo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 0.3s ease; /* Transición suave */
+  z-index: 2;
+}
+
+.fotoUnidad:hover + .efectoBrillo {
+  opacity: 1; /* Hace visible el efecto de brillo al hacer hover */
 }
 
 .pie-de-foto {
-    margin-top: 5px;
-    font-style: italic; 
+  display: flex;
+  justify-content: center;
+  font-size: 60%;
+  color: white;
+  font-family: 'Press Start 2P';
+  padding-left: 24%;
+  padding-right: 24%;
+  text-align: center;
+}
+
+.texto1 {
+  font-size: 16px;
+  color: #343a40;
+}
+
+.footer h4 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: #343a40;
+}
+
+.footer p {
+  margin: 5px 0;
+}
+
+.footer img {
+  transition: transform 0.3s ease;
+}
+
+.girlSlime{
+  display: flex;
+  padding-top: 17%;
+  padding-bottom: 8%;
+  justify-content: center;
+  align-items: center;
+}
+
+.gifsChica{
+  position: absolute;
+  width: 210px; /* Ajusta según el tamaño de tus GIFs */
+  height: 210px; /* Ajusta según el tamaño de tus GIFs */
+  animation: move 3s linear infinite;
+}
+
+.gifsSlime{
+  position: absolute;
+  width: 50px; /* Ajusta según el tamaño de tus GIFs */
+  height: 50px; /* Ajusta según el tamaño de tus GIFs */
+  animation: move2 3s linear infinite;
+}
+
+.gifsSlime:nth-child(2) {
+  animation-delay: 2.5s; /* Esto hace que el segundo GIF aparezca con un retraso */
+}
+
+.gifsChica:nth-child(2) {
+  animation-delay: 0s; /* Esto hace que el segundo GIF aparezca con un retraso */
+}
+
+@keyframes move {
+  0% {
+      left: 260px; /* Empieza fuera del borde izquierdo */
+      opacity: 0;
+  }
+  10% {
+      opacity: 1;
+  }
+  90% {
+      left: calc(100% - 460px); /* Se mueve hasta casi el borde derecho */
+      opacity: 1;
+  }
+  100% {
+      left: calc(100% - 430px); /* Desaparece del borde derecho */
+      opacity: 0;
+  }
+}
+
+@keyframes move2 {
+  0% {
+      left: 260px; /* Empieza fuera del borde izquierdo */
+      opacity: 0;
+  }
+  10% {
+      opacity: 1;
+  }
+  90% {
+      left: calc(100% - 410px); /* Se mueve hasta casi el borde derecho */
+      opacity: 1;
+  }
+  100% {
+      left: calc(100% - 390px); /* Desaparece del borde derecho */
+      opacity: 0;
+  }
+}
+
+.info_container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.titulo{
+  display: flex;
+  font-family: 'Press Start 2P';
+  font-size: 200%;
+}
+
+.cuerpo{
+  display: flex;
+  flex-direction: column;
+  font-family: 'Press Start 2P';
+  color: white;
+  padding-left: 20%;
+  padding-right: 20%;
+  line-height: 110%;
+}
+
+.cuerpo_linea{
+  display: flex;
+  padding-top: 2%;
+  padding-bottom: 1%;
+  font-size: 80%;
+}
+
+.titulo_footer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+.img_footer{
+  display: flex;
+  width: 30%;
+  padding-left: 2%;
+}
+
+.texto_footer{
+  display: flex;
+  flex-direction: column;
+  margin-top: 1%;
+  margin-left: 24%;
+  margin-right: 24%;
+  color: white;
+  font-size: 80%;
+  line-height: 200%;
+  text-align: left;
+}
+
+.lineas_footer{
+  margin-top: 1%;
+  margin-bottom: 1%;
+}
+
+.boton{
+  display: flex;
+  justify-content: center;
+  padding-top: 3%;
+}
+
+a{
+  display: flex;
+  justify-content: center;
 }
